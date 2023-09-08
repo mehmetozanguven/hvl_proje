@@ -84,7 +84,7 @@ Problem için  tasarladığım akış şu şekildedir:
 - Dünyayı temsil etmek amaçlı oluşturduğum **SimulateWorld** projesi dünyaya gelen bütün istekleri dinlemektedir. Bir istek geldiğinde `KafkaTopicName.RADAR_TOPIC` topic'e istek göndermekte yeni bir cismin geldiğini belirtmektedir.
 - Sensörleri temsil etmek için oluşturduğum **Sensor** projesinde öncesinde iki tane sensörün yerleştirilmiş olduğunu varsaydım.(Bu varsayımı ilgili projenin main metodunda gerçekleştirdim)
   - Sensor projesi `KafkaTopicName.RADAR_TOPIC` isimli topic'leri dinliyor. Bir aksiyon geldiğinde gelen aksiyona göre kerteriz bilgisini hesaplıyor ve `KafkaTopic.SEND_TARGET_TO_MAINFRAME` topic'ine kerteriz bilgisini gönderiyor.
-- Merkezi birimi temsil etmek amacıyla oluşturduğum **MainFrame** projesi, `KafkaTopic.SEND_TARGET_TO_MAINFRAME` gelen istekleri dinliyor gelen istek Sensor üzerinden geliyorsa verilen kerteriz bilgisine göre hedefin tespit etmeye çalışıyor.
+- Merkezi birimi temsil etmek amacıyla oluşturduğum **MainFrame** projesi, `KafkaTopic.SEND_TARGET_TO_MAINFRAME` gelen istekleri dinliyor gelen istek Sensor üzerinden geliyorsa verilen kerteriz bilgisine göre hedefi tespit etmeye çalışıyor.
 
 ### Kerteriz bilgisine göre hedef tespiti
 
